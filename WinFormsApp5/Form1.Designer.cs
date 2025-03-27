@@ -34,6 +34,9 @@
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
             button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +52,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(121, 333);
+            button1.Location = new Point(121, 367);
             button1.Name = "button1";
             button1.Size = new Size(112, 34);
             button1.TabIndex = 1;
@@ -97,19 +100,52 @@
             // 
             // button2
             // 
-            button2.Location = new Point(121, 194);
+            button2.Location = new Point(117, 194);
             button2.Name = "button2";
-            button2.Size = new Size(112, 34);
+            button2.Size = new Size(179, 34);
             button2.TabIndex = 5;
             button2.Text = "Rotate";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button_rotate_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(121, 234);
+            button3.Name = "button3";
+            button3.Size = new Size(175, 34);
+            button3.TabIndex = 6;
+            button3.Text = "Invert Colors ";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button_invert_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(121, 274);
+            button4.Name = "button4";
+            button4.Size = new Size(175, 34);
+            button4.TabIndex = 7;
+            button4.Text = "Up side down ";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button_side_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(121, 311);
+            button5.Name = "button5";
+            button5.Size = new Size(175, 34);
+            button5.TabIndex = 8;
+            button5.Text = "Only green ";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button_green_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(radioButton3);
             Controls.Add(radioButton2);
@@ -131,5 +167,8 @@
         private RadioButton radioButton2;
         private RadioButton radioButton3;
         private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
     }
 }

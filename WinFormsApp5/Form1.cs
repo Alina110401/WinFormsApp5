@@ -29,12 +29,12 @@ namespace WinFormsApp5
 
         private void button90_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button180_Click(object sender, EventArgs e)
         {
-       
+
 
         }
 
@@ -73,9 +73,54 @@ namespace WinFormsApp5
 
         private void button270_Click(object sender, EventArgs e)
         {
-           
+
 
 
         }
+
+        private void button_invert_Click(object sender, EventArgs e)
+
+
+        {
+            Bitmap bmp = new Bitmap(pictureBox1.Image);
+
+            for (int y = 0; y < bmp.Height; y++)
+            {
+                for (int x = 0; x < bmp.Width; x++)
+                {
+                    Color originalColor = bmp.GetPixel(x, y);
+                    Color invertedColor = Color.FromArgb(255 - originalColor.R,
+                                                         255 - originalColor.G,
+                                                         255 - originalColor.B);
+                    bmp.SetPixel(x, y, invertedColor);
+                }
+            }
+
+            pictureBox1.Image = bmp;
+        }
+
+        private void button_side_Click(object sender, EventArgs e)
+        {
+            {
+                if (pictureBox1.Image != null)
+                {
+                    pictureBox1.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                    pictureBox1.Refresh();
+                }
+
+            }
+        }
+
+       
+        
+
+    
+
+
+            
+        }
     }
-}
+
+        
+
+
