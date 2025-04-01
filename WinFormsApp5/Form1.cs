@@ -99,6 +99,14 @@ namespace WinFormsApp5
             pictureBox1.Image = bmp;
         }
 
+
+
+
+
+        private void button_green_Click(object sender, EventArgs e)
+        {
+
+        }
         private void button_side_Click(object sender, EventArgs e)
         {
             {
